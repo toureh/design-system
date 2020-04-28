@@ -4,11 +4,11 @@ import { BaseButton } from '../../base/base-button';
 customElements.define('base-button', BaseButton as any);
 
 @Component({
-  tag: 'my-button',
-  styleUrl: 'my-button.css',
+  tag: 'wiz-button',
+  styleUrl: 'button.css',
   shadow: true
 })
-export class MyComponent {
+export class MyButton {
   render() {
     return (
       <base-button><slot></slot></base-button>

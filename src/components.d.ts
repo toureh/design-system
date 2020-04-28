@@ -6,69 +6,32 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface MyButton {
-    }
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first": string;
-        /**
-          * The last name
-         */
-        "last": string;
-        /**
-          * The middle name
-         */
-        "middle": string;
+    interface WizButton {
     }
 }
 declare global {
-    interface HTMLMyButtonElement extends Components.MyButton, HTMLStencilElement {
+    interface HTMLWizButtonElement extends Components.WizButton, HTMLStencilElement {
     }
-    var HTMLMyButtonElement: {
-        prototype: HTMLMyButtonElement;
-        new (): HTMLMyButtonElement;
-    };
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
-    }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
+    var HTMLWizButtonElement: {
+        prototype: HTMLWizButtonElement;
+        new (): HTMLWizButtonElement;
     };
     interface HTMLElementTagNameMap {
-        "my-button": HTMLMyButtonElement;
-        "my-component": HTMLMyComponentElement;
+        "wiz-button": HTMLWizButtonElement;
     }
 }
 declare namespace LocalJSX {
-    interface MyButton {
-    }
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first"?: string;
-        /**
-          * The last name
-         */
-        "last"?: string;
-        /**
-          * The middle name
-         */
-        "middle"?: string;
+    interface WizButton {
     }
     interface IntrinsicElements {
-        "my-button": MyButton;
-        "my-component": MyComponent;
+        "wiz-button": WizButton;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "my-button": LocalJSX.MyButton & JSXBase.HTMLAttributes<HTMLMyButtonElement>;
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "wiz-button": LocalJSX.WizButton & JSXBase.HTMLAttributes<HTMLWizButtonElement>;
         }
     }
 }
